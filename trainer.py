@@ -57,5 +57,11 @@ if __name__ == '__main__':
         tf.logging.__dict__[hparams.verbosity] / 10
     )
 
-    
+    # Run the training job
+    model_fn = getattr(model_module, 'model_fn')
+    input_fn = getattr(dataset_module, 'input_fn')
+    # train_input_fn = lambda
+
+
+
 
